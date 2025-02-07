@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav {   
+    padding: 2vw 0; 
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    color: rgba(255, 0, 0, 0.74);
+}
+
+.nav-part2 {
+    display:flex;
+    align-items: center;  
+    gap: 1vw;  
+}
+
+.nav-part2 h4 {
+    padding: 5px 15px;
+    border: 1px solid rgba(66, 65, 65, 0.39);
+    border-radius: 50px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.795);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-part2 h4 a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.795);
+    position: relative;
+    z-index: 9;
+}
+
+.nav-part2 h4 a:hover {
+    color: white;
+}
+
+.nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+}
+
+.nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.center {
+    height: 70vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.315);
+    padding-bottom: 3.5vw;
+}
+
+.left h3 {
+    width: 25vw;
+    font-size: 1.8vw;  
+    line-height: 2vw;  
+}
+
+.center h1 {
+    font-size: 9vw;
+    letter-spacing: -2px;
+    line-height: 8vw;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.hero-shape {
+    position: absolute;
+    width: 45vw;
+    height: 35vw;    
+    right: 0;
+    top: 70vh;    
+}
+
+.hero-1 {
+    height: 100%;
+    width: 100%;
+    background-color: #f01811;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(15px);
+    position: absolute;
+}
+
+.hero-2 {
+    height: 30vw;
+    width: 30vw;
+    background-color: #f01811;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(15px);
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.hero-3 {
+    height: 30vw;
+    width: 30vw;
+    background-color: #f01811;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(15px);
+    position: absolute;
+    animation-name: anime;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+video {    
+    width: 100vw;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 3vw;
+    width: 100%;
+    position: relative;
+}
+
+@keyframes anime {
+    from {
+        transform: translate(55%, -3%);        
+    }
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);        
+    }
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
