@@ -110,7 +110,7 @@ nav {
 .hero-1 {
     height: 100%;
     width: 100%;
-    background-color: #f01811;
+    background: linear-gradient(to top right, red, rgba(255, 72, 0, 0.938));
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     filter: blur(15px);
@@ -120,7 +120,7 @@ nav {
 .hero-2 {
     height: 30vw;
     width: 30vw;
-    background-color: #f01811;
+    background: linear-gradient(to top right, red, rgba(255, 72, 0, 0.938));
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     filter: blur(15px);
@@ -135,7 +135,7 @@ nav {
 .hero-3 {
     height: 30vw;
     width: 30vw;
-    background-color: #f01811;
+    background: linear-gradient(to top right, red, rgba(255, 72, 0, 0.911));
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     filter: blur(15px);
@@ -160,7 +160,8 @@ video {
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
-    padding: 7vw 0;
+    padding: 6vw 0;
+    position: relative;
 }
 
 .moving-text {
@@ -197,6 +198,62 @@ video {
     margin: 1vw 3vw;
 }
 
+.page2-bottom {
+    height: 80vh;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vw;
+    position: relative;
+    z-index: 9;
+}
+
+.page2-bottom h1 { 
+    font-size: 3.5vw;
+    width: 50%;
+    line-height: 4vw;
+}
+
+.bottom-part2 {
+    width: 20%;
+    margin: 10vw 5vw 0 0;
+}
+
+.bottom-part2 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.bottom-part2 p {
+    font-weight: 200;
+    margin-top: 2vw;
+    font-size: 1vw;
+}
+
+.page2 .gooey {
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, rgb(255, 0, 0), rgba(255, 60, 0, 0.911));
+    top: 56%;
+    left: 25%;
+    filter: blur(15px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+ .page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+ }
+
 @keyframes anime {
     from {
         transform: translate(55%, -3%);        
@@ -223,6 +280,18 @@ video {
         transform: translateX(-100%);
     }
 }
+
+@keyframes gooey {
+    from {
+        filter:blur(15px);
+        transform: translate((10%, -10%) skew(0))
+    }
+    to {
+        filter: blur(20px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
 
 
 
